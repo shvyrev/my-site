@@ -1,105 +1,218 @@
-baseURL = "https://lightbi-hugo-theme.netlify.app/"
-DefaultContentLanguage = "en"
+baseurl = "/"
+title = "shvyrev"
 languageCode = "en-us"
-title = "Bad christian"
-theme = "lightbi-hugo"
-metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-#pygmentsUseClasses = true
-#pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
-enableRobotsTXT = true
-enableGitInfo = false
-Paginate = 6
-summaryLength  = "30"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # DEPRECATED! Use .Services.Disqus.Shortname
+googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
 
-[Params]
-selfHosted = true
-mainSections = ["post","posts"]
-dateFormat = "2 January 2023"
-comments = true
-readingTime = true
-wordCount = false
-useHLJS = true
-socialShare = true
-delayDisqus = true
-showRelatedPosts = true
-summaryLength  = "9"
-lunrSearch = true
-gcse = false
-lastmod = false
-rss = false
-pagination = "10"
-hideAuthor = false
-authorInfo = "She was born to be free, let her run wild in her own way and you will never lose her."
-description="Your can add your website description here."
-previewCardImagePlacement = "bottom"
-
-
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+[services.disqus]
+  shortname = "" # Enable Disqus by entering your Disqus shortname
+[services.googleAnalytics]
+  ID = "" # Enable Google Analytics by entering your tracking ID
 
 [Author]
-  name = "Bino Kochumol Varghese"
-  website = "https://binovarghese.com/"
-  email = "sample@gmail.com"
+  name = "John Doe"
+  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  avatar = "images/collections.jpg"
+
+[Params]
+  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
+  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = true # Enable Twitter Cards if true
+  readmore = false # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+  toc = false # Enable Table of Contents
+  pager = false # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
+  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+  mathjax = true # Enable MathJax
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+#   googleFontsLink = "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" # Load Google Fonts
+  googleFontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:400,400i,700&display=swap" # Load Google Fonts
+#   googleFontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" # Load Google Fonts
+#   fontFamilyPrimary = "'Lato', sans-serif"
+  fontFamilyPrimary = "'IBM Plex Sans', sans-serif"
+#   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  customCSS = ["css/custom.css"] # Include custom CSS files
+  customJS = ["js/custom.js"] # Include custom JS files
+
+  # DEPRECATED PARAMS
+  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
+  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
+
+[Params.logo]
+  subtitle = "Just another site" # Logo subtitle    
+  image = "images/collections.jpg" # Logo image. With title : 128x128, without title 256x256
+#   image = false       # Disable logo image 
+#   title = false       # Disable logo title
+#   subtitle = false    # Disable logo subtitle
+
+[Params.thumbnail]
+  visibility = ["list"] # Control thumbnail visibility
+#   visibility = ["list", "post"] # Control thumbnail visibility
+
+[Params.style.vars]
+  highlightColor = "#e22d30" # Override highlight color
+  fontFamilyPrimary = "'IBM Plex Sans', sans-serif"
+#   fontFamilyPrimary = "'Roboto', sans-serif"
+#   fontFamilyPrimary = "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+#   fontFamilySecondary = "IBM Plex Sans, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+#   home = "right"   # Configure layout for home page
+#   list = "right"   # Configure layout for list pages
+#   single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+#   widgets = ["search", "recent", "categories", "taglist"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+[Params.widgets.social]
+  # Enable parts of social widget
   facebook = "username"
-  instagram = "username"
-  youtube = "user/username" # or channel/channelname
   twitter = "username"
-  threads = "username"
+  instagram = "username"
   linkedin = "username"
+  telegram = "username"
   github = "username"
-  #gitlab = "username"
-  #bitbucket = "username"
-  #reddit = "username"
-  #xing = "username"
-  #stackoverflow = "users/XXXXXXX/username"
-  #snapchat = "username"
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
-  #500px = "username"
-  #codepen = "username"
-  #mastodon = "url"
-  #kaggle = "username"
-  #weibo = "username"
-  #slack = "username"
+  gitlab = "username"
+  bitbucket = "username"
+  email = "example@example.com"
+  cached = true
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+[Params.widgets.search]
+  cached = true
 
-[[menu.main]]
-    name = "Notes"
-    url = "/notes/"
-    weight = 2
+[Params.widgets.recent]
+  cached = true
 
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/blog/"
-    weight = 3
+[Params.widgets.categories]
+  cached = true
 
-[[menu.main]]
-    name = "Collections"
-    url = "/collections/"
-    weight = 4
+[Params.widgets.taglist]
+  cached = true
 
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 5
+[Params.widgets.languages]
+  cached = true
+
+
+# baseURL = "https://shvyrev.pages.dev/"
+# DefaultContentLanguage = "en"
+# languageCode = "en-us"
+# title = "Bad christian"
+# # theme = "lightbi-hugo"
+# theme = "mainroad"
+# # theme = "hugo-theme-tokiwa"
+# # theme = "hugo-theme-tokiwa"
+# metaDataFormat = "yaml"
+# pygmentsStyle = "trac"
+# #pygmentsUseClasses = true
+# #pygmentsCodeFences = true
+# pygmentsCodefencesGuessSyntax = true
+# #pygmentsUseClassic = true
+# #pygmentOptions = "linenos=inline"
+# #disqusShortname = "XXX"
+# #googleAnalytics = "XXX"
+# enableRobotsTXT = true
+# enableGitInfo = false
+# Paginate = 6
+# summaryLength  = "3"
+
+# [Params]
+# selfHosted = true
+# mainSections = ["post","posts"]
+# dateFormat = "2 January 2023"
+# comments = true
+# readingTime = true
+# wordCount = false
+# useHLJS = true
+# socialShare = true
+# delayDisqus = true
+# showRelatedPosts = true
+# summaryLength  = "9"
+# lunrSearch = true
+# gcse = false
+# lastmod = false
+# rss = false
+# pagination = "10"
+# hideAuthor = false
+# authorInfo = "She was born to be free, let her run wild in her own way and you will never lose her."
+# description="Your can add your website description here."
+# previewCardImagePlacement = "bottom"
+
+
+# [sitemap]
+#   changefreq = "monthly"
+#   priority = 0.5
+#   filename = "sitemap.xml"
+
+# [Author]
+#   name = "Sergey Shvyrev"
+#   website = "https://shvyrev.pages.dev/"
+#   email = "cellyco@yahoo.com"
+#   facebook = "username"
+#   instagram = "username"
+#   youtube = "user/username" # or channel/channelname
+#   twitter = "username"
+#   threads = "username"
+#   linkedin = "username"
+#   github = "username"
+#   #gitlab = "username"
+#   #bitbucket = "username"
+#   #reddit = "username"
+#   #xing = "username"
+#   #stackoverflow = "users/XXXXXXX/username"
+#   #snapchat = "username"
+#   #soundcloud = "username"
+#   #spotify = "username"
+#   #bandcamp = "username"
+#   #itchio = "username"
+#   #vk = "username"
+#   #paypal = "username"
+#   #telegram = "username"
+#   #500px = "username"
+#   #codepen = "username"
+#   #mastodon = "url"
+#   #kaggle = "username"
+#   #weibo = "username"
+#   #slack = "username"
+
+# [[menu.main]]
+#     name = "Home"
+#     url = "/"
+#     weight = 1
+
+# [[menu.main]]
+#     name = "Notes"
+#     url = "/notes/"
+#     weight = 2
+
+# [[menu.main]]
+#     name = "Tags"
+#     url = "/tags/blog/"
+#     weight = 3
+
+# [[menu.main]]
+#     name = "Collections"
+#     url = "/collections/"
+#     weight = 4
+
+# [[menu.main]]
+#     name = "About"
+#     url = "/about/"
+#     weight = 5
 
 
 

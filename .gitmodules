@@ -1,3 +1,15 @@
 [submodule "themes/lightbi-hugo"]
 	path = themes/lightbi-hugo
 	url = https://github.com/binokochumolvarghese/lightbi-hugo
+[submodule "themes/hugo-theme-tokiwa"]
+	path = themes/hugo-theme-tokiwa
+	url = https://github.com/heyeshuang/hugo-theme-tokiwa.git
+[submodule "themes/tailwind"]
+	path = themes/tailwind
+	url = https://github.com/tomowang/hugo-theme-tailwind.git
+[submodule "themes/hugo-initio"]
+	path = themes/hugo-initio
+	url = https://github.com/miguelsimoni/hugo-initio.git
+[submodule "themes/mainroad"]
+	path = themes/mainroad
+	url = https://github.com/vimux/mainroad.git
