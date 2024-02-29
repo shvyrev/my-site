@@ -1,41 +1,25 @@
----
-title: About
-date: 2022-01-25T14:00:00.000Z
-authorbox: false
-sidebar: false
-menu: main
----
++++
+title = "About"
+description = "Hugo, the world’s fastest framework for building websites"
+date = "2019-02-28"
+aliases = ["about-us","about-hugo","contact"]
+author = "Hugo Authors"
++++
 
-Our website builds with [Hugo](https://gohugo.io/) static site generator and
-[Mainroad](https://github.com/vimux/mainroad) theme. This demo allows you to see what Mainroad based website looks like
-before deciding to go with it. Just keep in mind that the current demo shows the basics, a small part of what the
-combination of Hugo and Mainroad can do.
+Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
 
-## About Mainroad
+Hugo makes use of a variety of open source projects including:
 
-Mainroad is a responsive, simple, clean and content-focused Hugo theme based on the MH Magazine lite WordPress theme.
+* https://github.com/yuin/goldmark
+* https://github.com/alecthomas/chroma
+* https://github.com/muesli/smartcrop
+* https://github.com/spf13/cobra
+* https://github.com/spf13/viper
 
-Main features:
+Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
 
-* Responsive design
-* Main & secondary menus
-* Widgetized sidebar
-* Translations. Over 15 languages and counting
-* Configurable theme settings (sidebar position, author box, post navigation, highlight color) via config.toml
-* Hugo internal templates (Open Graph, Schema, Twitter Cards, Disqus, Google Analytics)
-* Wide cross-browser compatibility
-  * Desktop: IE11+, Chrome, Firefox, Safari
-  * Mobile: Android browser (on Android 4.4+), Safari (on iOS 7+), Google Chrome, Opera mini
-* Custom Google Fonts support, MathJax, Table of Contents, SVG icons and much more…
+Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
 
-Learn more on [GitHub](https://github.com/vimux/mainroad). Mainroad theme is released under the
-[GPLv2 license](https://github.com/vimux/mainroad/blob/master/LICENSE.md).
+Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
 
-## About Hugo
-
-Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and
-configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. With its
-amazing speed and flexibility, Hugo makes building websites fun again.
-
-Learn more on [GitHub](https://github.com/gohugoio/hugo). Complete documentation is available at
-[Hugo Documentation](https://gohugo.io/getting-started/).
+Learn more and contribute on [GitHub](https://github.com/gohugoio).
