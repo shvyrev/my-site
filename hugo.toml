@@ -21,7 +21,7 @@ unsafe = true
 [params]
 bannerFont = "fonts/exampleFont" 
 description = """
-!!! software development engineer
+software development engineer
 """ 
 env = "production" # for Google Analytics and DISQUS.
 favicon = "img/favicon-32x32.png" 
@@ -31,20 +31,22 @@ useChineseFonts = false
 postDateFormat = "2006-1-2"
 
 [menu]
+
 # Shown in the side menu.
 [[menu.main]]
 identifier = "post"
 name = "Posts"
 url = "/post/"
 weight = 1
-[[menu.main]]
-name = "Tags"
-url = "/tags/"
-weight = 2
+
+# [[menu.main]]
+# name = "Tags"
+# url = "/tags/"
+# weight = 2
 
 [[menu.main]]
-name = "Categories"
-url = "/categories/"
+name = "themes"
+url = "/categories/themes/"
 weight = 2
 
 [[menu.main]]
@@ -59,18 +61,21 @@ series = "series"
 tag = "tags"
 
 [social]
-bilibili = "http://example.com/"
-github = "https://github.com/"
-gitlab = "https://gitlab.com/"
-instagram = "http://example.com/"
+# bilibili = "http://example.com/"
+github = "https://github.com/shvyrev"
+# gitlab = "https://gitlab.com/"
+# instagram = "http://example.com/"
 mail = "mailto:anon@example.com"
 twitter = "https://twitter.com/"
-weibo = "http://example.com/"
+mastodon = "https://mastodon.com/"
+# weibo = "http://example.com/"
 youtube = "https://youtube.com/"
-zhihu = "http://example.com/"
+# zhihu = "http://example.com/"
 # any icon in layouts/partials/svg can be used by the name without the "-line.svg"
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "JSON"]
+disableKinds = ['rss']
+
 
 
